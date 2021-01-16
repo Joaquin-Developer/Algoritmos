@@ -4,7 +4,7 @@ class Main {
     public static void main(String[] args) {
         
         int array[] = {1, 5, 10, 43, 101, 202};
-        int objective = 101;
+        final int objective = 101;
         final int SIZE_ARRAY = 6;
         System.out.println("Búsqueda binaria por algoritmo recursivo: ");
         printResult(binarySearchRecursive(array, 0, SIZE_ARRAY - 1, objective));
