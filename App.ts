@@ -1,23 +1,23 @@
 
-let texto = "hola que tal, mi nombre es joaquín, mi edad es 19 años hace 3 años que programo!";
+let text = "hola que tal, mi nombre es joaquín, mi edad es 19 años hace 3 años que programo!";
 
-function normalize(palabra: string) {
-    return palabra.toLowerCase().replace(",", "").replace(".", "").replace("!", "");
+function normalize(wold: string) {
+    return word.toLowerCase().replace(",", "").replace(".", "").replace("!", "");
 }
 
-function palabrasRepetidas(texto: string) {
+function repeatedWords(text: string) {
     let dict: {[key: string]: number} = {};
-    let palabrasSeparadas = texto.split(" ");
+    let separatedWords = text.split(" ");
 
-    for (let palabra of palabrasSeparadas) {
-        if (normalize(palabra) in dict) {
-            ++dict[normalize(palabra)];
+    for (let word of separatedWords) {
+        if (normalize(word) in dict) {
+            ++dict[normalize(word)];
         } else {
-            dict[normalize(palabra)] = 1;
+            dict[normalize(word)] = 1;
         }
     }
     console.log(dict);
 
 }
 
-palabrasRepetidas(texto);
+repeatedWords(text);
