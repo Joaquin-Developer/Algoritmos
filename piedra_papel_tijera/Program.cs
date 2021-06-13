@@ -6,14 +6,28 @@ namespace piedra_papel_tijera
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Ingrese su nombre:");
-            string name = Console.ReadLine();
-            Console.WriteLine($"Nombre ingresado: { name }");
+            new Game().Start();
         }
     }
 
     class Game
     {
+        private double PtsUser { get; set; }
+        private double PtsComputer { get; set; }
+        private string Username { get; set; }
+
+        public void Start()
+        {
+            Console.WriteLine("Ingresar nombre de usuario");
+            this.Username = Console.ReadLine();
+            Console.WriteLine($"Nombre ingresado: { this.Username }");
+        }
+
+        void Reset()
+        {
+            this.PtsComputer = 0;
+            this.PtsUser = 0;
+        }
 
     }
 
