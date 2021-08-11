@@ -1,7 +1,7 @@
 
 let text = "hola que tal, mi nombre es joaquín, mi edad es 19 años hace 3 años que programo!";
 
-function normalize(wold: string) {
+function normalize(word: string) {
     return word.toLowerCase().replace(",", "").replace(".", "").replace("!", "");
 }
 
