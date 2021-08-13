@@ -1,7 +1,4 @@
 
-
-
-
 def factorial(number: int) -> int:
     if number == 0:
         return 1
@@ -14,5 +11,4 @@ def combinatoria(n: int, k: int) -> int:
 if __name__ == '__main__':
     n = int(input("enter value of n: "))
     k = int(input("enter value of k: "))
-    # print(combinatoria(8, 5))
-    print(combinatoria(n, k))
+    print(f"C({ n }, { k }) = { combinatoria(n, k) }")
