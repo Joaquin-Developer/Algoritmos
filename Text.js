@@ -1,21 +1,20 @@
+/**
+ * Algoritmo para validar un string:
+ * La cadena no puede empezar ni terminar con espacios
+ * tampoco puede contener numeros, ni mayusculas
+ */
 
-function validText(text) {
-    let valid = false
+const validText = (text) => {
     const array = text.split("")
+    if (array.length == 0) return false
 
-    if (array.length === 0) {
-        return false
-    }
-
-    for (const elem of array) {
-        console.log(elem)
-        if (elem !== " ") {
-            valid = true
+    for (const char of text) {
+        if (!isNaN(char) || char == " ") {
+            return false
+        } else if (char.toUpperCase() == char) {
+            return false
         }
     }
-    return valid
+    
+    return true
 }
-
-const text = " d"
-console.log(validText(text))
-
